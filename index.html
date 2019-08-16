@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🅱iscord</title>
+    <script src = "client.js"></script>
+    <style>
+    .messageBoard
+    {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        background-color: burlywood;
+        border: 2px solid black;
+    }
+    #messageBoard
+    {
+        position: absolute;
+        left: 200px;
+        top: 50px;
+        background-color: burlywood;
+        border: 2px solid black;
+    }
+    .message
+    {
+        background-color: rgb(58, 58, 58);
+        color: white;
+        padding: 8px;
+        border: 3px solid black;
+    }
+    .mention
+    {
+        background-color: rgb(214, 223, 99);
+    }
+    .errorMsg
+    {
+        color: red;
+    }
+    td
+    {
+        white-space: nowrap;
+    }
+    #userList
+    {
+        position: absolute;
+        background-color: rgb(58, 58, 58);
+        border: 3px solid rgb(103, 32, 184);
+        width: 250px;
+        top: 50px;
+        right: 50px;
+    }
+    .userEntry
+    {
+        background-color: rgb(58, 58, 58);
+        color: white;
+        padding: 8px;
+        border: 3px solid black;
+    }
+    .userEntry:hover
+    {
+        background-color: rgb(78, 78, 78);
+        cursor: default;
+    }
+    .infoCard
+    {
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        border: 4px solid black;
+        background-color: rgb(58, 58, 58);
+        color: white;
+    }
+    #channelList
+    {
+        position: absolute;
+        width: 150px;
+        top: 50px;
+        left: 50px;
+        background-color: rgb(58, 58, 58);
+        border: 4px solid black;
+        table-layout: fixed;
+    }
+    .channelEntry
+    {
+        padding: 8px;
+        max-width: 150px;
+        white-space: normal;
+        background-color: rgb(58, 58, 58);
+        color: white;
+    }
+    .channelEntry:hover
+    {
+        background-color: rgb(78, 78, 78);
+        cursor: default;
+    }
+    .channelEntry.selected
+    {
+        background-color: rgb(78, 78, 78);
+        font-weight: bold;
+        border: 3px dashed rgb(58, 58, 58);
+    }
+    #addChannel
+    {
+        background-color: rgb(58, 58, 58);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid black;
+    }
+    #addChannel:hover
+    {
+        background-color: rgb(78, 78, 78);
+        cursor: default;
+    }
+    </style>
+</head>
+<body>
+    <h3 id = "text">Please enter a username</h3>
+    <input id = "input" autocomplete="off" name = "username" type = "text">
+    <button id = "join">Join</button>
+    <div id = "inputDiv" style = "background-color: crimson; border: 2px solid black; width: 250px; height: 50px">
+        <input type = "file" name = "icon" id = "fileInput" style = "position: relative; top: 15px; left: 25px"/>
+    </div>
+</body>
+</html>
