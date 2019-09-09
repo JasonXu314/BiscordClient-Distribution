@@ -1,0 +1,209 @@
+body
+{
+    background-color: rgb(58, 58, 58);
+}
+.messageBoard
+{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    background-color: rgb(36, 36, 36);
+    border: 2px solid black;
+}
+#messageBoard
+{
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    background-color: rgb(36, 36, 36);
+    border: 2px solid black;
+    display: block;
+    height: 600px;
+    overflow: scroll;
+    display: block;
+}
+.message
+{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 8px 12px 8px 12px;
+    border: 3px solid black;
+    cursor: default;
+    max-width: 850px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    border-radius: 8px;
+}
+.messageElement
+{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+.mention
+{
+    background-color: rgb(212, 175, 55);
+}
+.errorMsg
+{
+    color: red;
+}
+td
+{
+    white-space: nowrap;
+}
+#userList
+{
+    position: absolute;
+    background-color: rgb(58, 58, 58);
+    border: 3px solid rgb(115, 138, 219);
+    width: 250px;
+    top: 50px;
+    right: 50px;
+    border-radius: 15px;
+}
+.userEntry
+{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 8px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.userEntry:hover
+{
+    background-color: rgb(78, 78, 78);
+    cursor: default;
+}
+.infoCard
+{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border: 4px solid black;
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+#channelList
+{
+    position: absolute;
+    width: 175px;
+    top: 50px;
+    left: 25px;
+    background-color: rgb(58, 58, 58);
+    border: 4px solid black;
+}
+.channelEntry
+{
+    padding: 8px;
+    max-width: 50px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    user-select: none;
+    border-radius: 8px;
+}
+.channelEntry:hover
+{
+    background-color: rgb(78, 78, 78);
+    cursor: default;
+}
+.channelEntry.selected
+{
+    background-color: rgb(78, 78, 78);
+    font-weight: bold;
+    border: 3px dashed rgb(58, 58, 58);
+}
+#addChannel
+{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+}
+#addChannel:hover
+{
+    background-color: rgb(78, 78, 78);
+    cursor: default;
+}
+.editSub
+{
+    cursor: default;
+    user-select: none;
+    color: rgb(108, 108, 108);
+}
+a:visited
+{
+    color: cornflowerblue;
+}
+.optionsDiv
+{
+    position: absolute;
+    color: rgb(29, 29, 29);
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+    user-select: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+.optionsDiv:hover
+{
+    background-color: rgb(108, 108, 108);
+}
+.optionsTable
+{
+    background-color: rgb(58, 58, 58);
+    border: 3px solid black;
+    width: 60px;
+}
+.channelOption
+{
+    background-color: rgb(58, 58, 58);
+    border: 2px solid black;
+    color: white;
+}
+.channelOption:hover
+{
+    background-color: rgb(78, 78, 78);
+    font-weight: bold;
+}
+#input
+{
+    border-radius: 7px;
+    border: 1px solid black;
+    padding-left: 6px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+.attachmentTD
+{
+    border: 3px solid black;
+}
+
+.downloadLink:visited
+{
+    color: -webkit-link;
+}
+
+.loadingCircle
+{
+    border: 16px solid rgb(115, 138, 219);
+    border-bottom: rgb(115, 138, 219);
+    border-top: rgb(58, 58, 58);
+    border-left: rgb(58, 58, 58);
+    border-radius: 50%;
+    width: 250;
+    height: 250;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
