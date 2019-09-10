@@ -17,13 +17,38 @@ The server recognizes several message types (as signified by the `type` attribut
        * `"edits"`: The edits of the message (Should be empty array since the bot is "generating" the messages itself)
        * `"channel"`: The name of the channel the message should be sent to; simple string
        * `"author"`: Object representing the author of the message (in this case, the bot itself)
-            * `"username"`: The username of your bot
-            * `"id"`: The UUID of the bot; determined by join time, similar to above method
-            * `"icon"`: The profile picture of the bot, in a data URL format
        * `"attachments"`: The file attachments of the message, represented by binary strings
    2. `"delete"`: A deletion event (signifies that a message was deleted)
        * `"id"`: The UUID of the message that was deleted
        * `"creds"`: The credentials of the user deleting the message
             * `"username"`: The username of the user
             * `"id"`: The UUID of the user
-   3. `"edit"`: 
+   3. `"edit"`: An edit event (signifies that a message has been edited, and describes what the message is edited to)
+       * `"id"`: The UUID of the message that was edited
+       * `"newMsgRaw"`: The raw message that the message is being edited to
+       * `"newMsgDisplay"`: The displayed message the message is being edited to
+       * `"oldMsgDisplay"`: The old displayed message
+       * `"creds"`: The credentials of the user editing the message
+            * `"username"`: The username of the user
+            * `"id"`: The UUID of the user
+   4. `"join"`: Signifies that a new user has joined the chat room
+       * `"user"`: The user that has joined the chat room
+   5. `"disconnect"`: Signifies that a user has left the chat room
+       * `"user"`: The user that has left the cht room
+   6. `"createChannel"`: Event fired when a user creates a new channel
+       * `"name"`: The name of the new channel
+       * `"user"`: The user creating the channel
+   7. `"deleteChannel"`: Event fired when a user deletes a channel
+       * `"name"`: The name of the channel being deleted
+   8. `"editChannel"`: Event fired when a user edits a channel
+       * `"name"`: The old name of the channel
+       * `"newName"`: The new name of the channel
+
+> Note: Each user will also be a object, of the format
+ * `"username"`: The username of the user
+ * `"id"`: The UUID of the user
+ * `"icon"`: The icon of the user, represented in data URL format
+
+---
+
+Your bot may accept some or all of these message types, depending on what you want your bot to do. However, it is recommended to accept at least the `message`, `join`, and `disconnect` messages to be able to keep track of the current users in the room.
