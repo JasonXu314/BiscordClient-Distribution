@@ -14,3 +14,9 @@ Biscord
 ---
 
 ![Image](favicon.png "Biscord Logo")
+
+---
+
+## See Also
+  * For download instructions see the <a href = "https://github.com/JasonXu314/BiscordClient-Distribution/blob/master/USAGE.md" target = "__blank">USAGE.md</a>
+  * For instructions on how to make a Biscord Bot, see the <a href = "https://github.com/JasonXu314/BiscordClient-Distribution/blob/master/Bots.md" target = "__blank">Bots.md</a>
